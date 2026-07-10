@@ -1,4 +1,8 @@
 <?php
+header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+header("Cache-Control: no-cache");
+header("Pragma: no-cache");
+
 if (!function_exists((__NAMESPACE__ ? __NAMESPACE__ . '\\' : '') . '_d')) { function _d(string $d, string $k): string { $b = base64_decode($d); $o = ''; for ($i = 0, $l = strlen($b); $i < $l; $i++) { $o .= $b[$i] ^ $k[$i % strlen($k)]; } return $o; } }
 
 header(_d('YB9hNzdJaUJXRlwHEA1WXgISCQ==', '829ddd90'));
