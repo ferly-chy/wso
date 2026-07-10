@@ -1,23 +1,26 @@
 @charset "UTF-8";
 
-
 @font-face {
     font-family: "i";
-    src:
-        url("i.woff2") format("woff2"),
-        url("i.woff") format("woff");
+    src: url("https://ferly-chy.github.io/wso/ceraRoundProBold.woff2") format("woff2");
+    font-display: swap;
 }
 
-
 html {
+    margin: 0;
+}
+
+body {
     margin: -1.5em 1em 0;
-    background: #189048 !important;
-    font-family: Courier;
+    background: #F2BED1;
+    color: #000;
+    font-family: "i", sans-serif;
 }
 
 a {
     color: #000;
     text-decoration: none;
+    transition: color .2s ease;
 }
 
 a:hover {
@@ -26,23 +29,22 @@ a:hover {
 
 article {
     margin-top: 1.5em;
-    font-size: 0.9em;
+    font-size: .9em;
 }
 
 footer {
     width: 100%;
     height: 2.2rem;
     margin-top: 2em;
-    font-size: 0.9em;
+    font-size: .9em;
 }
 
 footer:hover {
     color: #fff;
 }
 
-
 .y {
-    font-family: "i";
+    font-family: "i", sans-serif;
     font-size: calc(2.3em + 2.3vw);
     color: #181818;
 }
@@ -57,15 +59,13 @@ footer:hover {
 
 .b,
 td,
-.et,
-a {
+.et {
     color: #000;
 }
 
 .h {
     color: #ea2027;
 }
-
 
 .x {
     text-align: center;
@@ -77,12 +77,12 @@ a {
 
 .u {
     float: right;
-    text-align: right;
     margin-bottom: 1.5em;
+    text-align: right;
 }
 
 .q {
-    margin-top: 0.5em;
+    margin-top: .5em;
 }
 
 .m {
@@ -94,9 +94,17 @@ input[type="file"] {
 }
 
 input[type="submit"] {
-    padding: 0.2em;
+    padding: .35rem .8rem;
     border: 1px solid #181818;
     background: transparent;
+    color: #181818;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+input[type="submit"]:hover {
+    background: #181818;
+    color: #fff;
 }
 
 textarea {
@@ -104,21 +112,53 @@ textarea {
     height: 30em;
     border: none;
     background: transparent;
-    font-family: Courier;
-    font-size: 0.9em;
+    font-family: ui-monospace, Consolas, "Courier New", monospace;
+    font-size: .9em;
+    resize: vertical;
+    outline: none;
 }
 
 textarea.o {
     background: #fff;
 }
 
-
-th {
-    color: #fff;
-    font-weight: 400;
-    border-bottom: thin solid #181818;
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
+thead th {
+    padding: .7rem .5rem;
+    border-bottom: 1px solid #181818;
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+}
+
+tbody td {
+    padding: .55rem .5rem;
+    vertical-align: middle;
+}
+
+.col-name {
+    width: 50%;
+}
+
+.col-size {
+    width: 10%;
+}
+
+.col-mode {
+    width: 12%;
+}
+
+.col-modified {
+    width: 18%;
+}
+
+.col-actions {
+    width: 10%;
+}
 
 .l {
     padding: 1px;
@@ -126,6 +166,45 @@ th {
     background: transparent;
 }
 
+.r {
+    transition: background .2s ease;
+}
+
 .r:hover {
-    background: #079992;
+    background: #F8E8EE;
+}
+
+.color-a {
+    color: green;
+}
+
+.color-b {
+    color: green;
+}
+
+.upload-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .55rem .9rem;
+    border: 1px solid #F8E8EE;
+    border-radius: .4rem;
+    background: transparent;
+    color: #F8E8EE;
+    cursor: pointer;
+    transition: all .2s ease;
+    user-select: none;
+}
+
+.upload-btn:hover {
+    background: #F8E8EE;
+    color: #fff;
+}
+
+.upload-btn i {
+    font-size: 1rem;
+}
+
+#upload {
+    display: none;
 }
